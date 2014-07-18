@@ -1,0 +1,16 @@
+body {
+  background-color: #662222;
+}
+
+hr {
+  color: #440000;
+}
+
+.centered {
+  background-color: #aa6666;
+  width: 40%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
