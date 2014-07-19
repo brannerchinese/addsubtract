@@ -50,9 +50,12 @@ function doArithmetic(operator) {
 }
 
 function validate(item) {
-  if (parseInt(item).toString() == item && 
-      parseFloat(item) - parseInt(item) === 0) {
-    // Note: this test fails on input -0
+  // Validate as integer
+  // Conditions: 1) numeric string && non-float number;
+  //          or 2) -0
+  if ((parseInt(item).toString() == item && 
+      parseFloat(item) - parseInt(item) === 0) ||
+       item === '-0') {
     return true;
   }
   else {
