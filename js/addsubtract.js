@@ -1,3 +1,6 @@
+// David Prager Branner
+// 20140719
+
 function doArithmetic(operator) {
   var values = document.getElementById("values");
   var x = document.getElementById('x').value;
