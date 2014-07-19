@@ -9,6 +9,7 @@ hr {
 .centered {
   background-color: #aa6666;
   width: 40%;
+  word-wrap: break-word;
   text-align: center;
   display: block;
   margin-left: auto;
