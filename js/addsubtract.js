@@ -34,17 +34,21 @@ function doArithmetic(operator) {
   }
  
   // X invalid.
-  else if (validate(x) === false) {
+  if (validate(x) === false) {
     document.getElementById("x").style.backgroundColor="#ee4444";
-    document.getElementById("x").value="";
     document.getElementsByName("x")[0].placeholder="integer ONLY, please!";
+  }
+  else {
+    document.getElementById("x").style.backgroundColor="#ffffff";
   }
   
   // Y invalid.
   if (validate(y) === false) {
     document.getElementById("y").style.backgroundColor="#ee4444";
-    document.getElementById("y").value="";
     document.getElementsByName("y")[0].placeholder="integer ONLY, please!";
+  }
+  else {
+    document.getElementById("y").style.backgroundColor="#ffffff";
   }
   return false;
 }
