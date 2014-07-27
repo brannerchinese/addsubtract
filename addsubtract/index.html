@@ -1,23 +1,26 @@
 <!-- David Prager Branner -->
-<!-- 20140719 -->
+<!-- 20140724 -->
 
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Adder-Subtractor</title>
-  <link rel="stylesheet" type="text/css" href="css/addsubtract.css">
+  <link rel="stylesheet" href="css/addsubtract.css">
 </head>
 
 <body>
+  <header></header>
+
   <hr>
-  <div class="centered">
-    <h1><br />Adder / Subtractor</h1>
+  <section class="centered">
+    <h1>Adder / Subtractor</h1>
     <div>
-      <form id="theForm" name="values">
-        X = <input type="text" placeholder="integer" id="x" name="x"><br /><br />
-        Y = <input type="text" placeholder="integer" id="y" name="y"><br /><br />
-        <input type="submit" onclick="javascript:return this.action=doArithmetic(this.id)" id="plus" value="+">
-        <input type="submit" onclick="javascript:return this.action=doArithmetic(this.id)" id="minus" value="-">
+      <form id="values" name="values">
+        X = <input type="text" placeholder="integer" id="x" name="x" require autofocus autocomplete="off"><br /><br />
+        Y = <input type="text" placeholder="integer" id="y" name="y" require autocomplete="off"><br /><br />
+        <input type="submit" id="plus" value="+">
+        <input type="submit" id="minus" value="-">
       </form>
     </div>
     <div id="results"><br />
@@ -27,8 +30,10 @@
       <span id="equals">is</span> 
       <span id="result">Z</span></strong>
     </div><br />
-  </div>
+  </section>
+
   <hr>
-  <script type="text/javascript" src="js/addsubtract.js"></script>
+  <footer></footer>
+  <script src="js/addsubtract.js"></script>
 </body>
 </html>

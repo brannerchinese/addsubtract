@@ -1,18 +1,44 @@
 // David Prager Branner
-// 20140719
+// 20140726
+
+;(function IIFE(window, document, undefined){
+  var values,
+      x,
+      x_input,
+      y,
+      y_input;
+  // Main loop
+  document.addEventListener('DOMContentLoaded', function(){
+    'use strict';
+
+    var form = document.getElementsByTagName("form");
+    alert(form[0]);
+    form[0].addEventListener("onchange", function() {
+      alert("here");
+      console.log("here");
+    });
+  });
+})(window, document);
+
+function acceptInput() {
+  // Call validate().
+  // If invalid, change color.
+}
 
 function doArithmetic(operator) {
-  var values = document.getElementById("values");
-  var x = document.getElementById('x').value;
-  var y = document.getElementById('y').value;
+  var values = document.getElementById('values'),
+      x_input = values.x,
+      x = x_input.value,
+      y_input = values.y,
+      y = y_input.value;
 
-  // No empty values.
+  // No empty values. QQQ perhaps unnecessary with HTML `required`.
   if (x === "" || y === "") {
     return false;
   }
 
   // Both values valid.
-  else if (validate(x) === true && validate(y) === true) {
+  else if (validate(x) && validate(y)) {
     document.getElementById("x").style.backgroundColor="#ffffff";
     document.getElementById("y").style.backgroundColor="#ffffff";
     x = parseInt(x);
